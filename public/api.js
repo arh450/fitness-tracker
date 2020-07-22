@@ -3,6 +3,7 @@ const API = {
     let res;
     try {
       res = await fetch("/api/workouts");
+      console.log(res);
     } catch (err) {
       console.log(err)
     }
@@ -21,6 +22,7 @@ const API = {
 
     const json = await res.json();
 
+    console.log(json)
     return json;
   },
   async createWorkout(data = {}) {
